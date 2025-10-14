@@ -1,16 +1,16 @@
 #soal 1 usia dewasa
 umur_andi = 16
 if umur_andi < 18 :
-    print("Andi belum boleh membuat KTP")
+    print("jeh bayekk")
 else :
-    print("Andi sudah boleh membuat KTP")
+    print("bayi tuwoo")
 
 #soal 2 nilai lulus
 nilai_dina = 85
 if nilai_dina >= 70 :
-    print("Dina lulus ujian")
+    print("cie lulus🙄")
 else :
-    print("Dina tidak lulus ujian")
+    print("wakwokawka gagal😜😂")
 
 #soal 3 uang cukup
 uang_ani = 45000
@@ -18,20 +18,20 @@ harga_buku = 50000
 kurang_uang = harga_buku - uang_ani
 
 if uang_ani >= harga_buku :
-    print(f"Ani bisa membeli buku {harga_buku}")
+    print(f"gass tumbas bukune rego {harga_buku}")
 else :
-    print(f"Ani tidak bisa membeli buku, uangnya kurang {kurang_uang}")
+    print(f"walahhh kadung exited jebul kurang {kurang_uang}")
 
 #soal 4 juara kelas
 avg_fajar = 92
 if avg_fajar >= 90 :
-    print("Fajar juara kelas")
+    print("wikike juara kelas")
 else :
-    print("Fajar bukan juara kelas")
+    print("nt masbroo belajar maneh")
 
 #soal 5 kecepatan aman
 vcar = 85
 if vcar > 80 :
-    print("Kecepatan mobil melebihi batas aman")
+    print("cah kae pengen dijemput pak polisi jam 3 pagi")
 else :
-    print("Kecepatan mobil aman")
+    print("aamaaan🤙🤙")
