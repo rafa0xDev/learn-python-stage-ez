@@ -20,7 +20,7 @@ kurang_uang = harga_buku - uang_ani
 if uang_ani >= harga_buku :
     print(f"gass tumbas bukune rego {harga_buku}")
 else :
-    print(f"walahhh kadung exited jebul kurang {kurang_uang}")
+    print(f"johhh kadung exited jebul kurang {kurang_uang}")
 
 #soal 4 juara kelas
 avg_fajar = 92
@@ -32,6 +32,6 @@ else :
 #soal 5 kecepatan aman
 vcar = 85
 if vcar > 80 :
-    print("cah kae pengen dijemput pak polisi jam 3 pagi")
+    print("cah kae pengen dijemput yang mahakuasa ketoke")
 else :
-    print("aamaaan🤙🤙")
+    print("cekelen aku pak polisii, aku tanpamu ngisingku abot")
