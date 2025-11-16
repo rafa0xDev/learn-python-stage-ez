@@ -35,3 +35,77 @@ if vcar > 80 :
     print("cah kae pengen dijemput yang mahakuasa ketoke")
 else :
     print("cekelen aku pak polisii, aku tanpamu ngisingku abot")
+
+
+umur = int(input("Masukkan umur Anda: "))
+if umur < 10:
+    print("Anak-anak")
+elif umur <= 19:
+    print("Remaja")
+else:
+    print("Dewasa")
+
+
+
+
+
+
+
+
+
+#1 Program Penentuan Kategori Usia dan Status Pelajar 
+nama = str(input("Masukkan nama Anda: "))
+umur = int(input("Masukkan umur Anda: "))
+status_pelajar = str(input("Pelajar/ bukan Pelajar ?"))
+
+if umur < 18 :
+   if status_pelajar.lower() == "pelajar":
+        print(f"{nama}, Anda Pelajar di bawah umur.")
+   else:
+        print(f"{nama}, Anda Bukan Pelajar di bawah umur.")
+elif umur >= 18 :
+    if status_pelajar.lower() == "pelajar":
+        print(f"{nama}, Anda Pelajar Dewasa.")
+    else:
+        print(f"{nama}, Anda Bukan Pelajar Dewasa.")
+else:
+    print("Input status pelajar tidak valid.")
+
+#2 toko online memberi diskon 
+nama_pelanggan = str(input("Masukkan nama pelanggan: "))
+jenis_pelanggan = str(input("Masukkan jenis pelanggan (reguler/silver/gold): "))
+total_belanja = float(input("Masukkan total belanja: "))
+
+if jenis_pelanggan.lower() == "reguler":
+    if total_belanja < 500000:
+        total_bayar = total_belanja
+        print(f"Halo {nama_pelanggan}, Anda adalah jenis pelanggan {jenis_pelanggan}, Total belanja awal Rp{total_belanja:.2f}, Anda tidak mendapatkan diskon, Total yang harus dibayar Rp{total_bayar:.2f}")
+    elif total_belanja >= 500000:
+        diskon = total_belanja * 0.05
+        total_bayar = total_belanja - diskon
+        print(f"Halo {nama_pelanggan}, Anda adalah jenis pelanggan {jenis_pelanggan}, Total belanja awal Rp{total_belanja:.2f}, Anda mendapatkan diskon 5%, Total yang harus dibayar Rp{total_bayar:.2f}")
+
+elif jenis_pelanggan.lower() == "silver":
+    if total_belanja < 500000:
+        diskon = total_belanja * 0.05
+        total_bayar = total_belanja - diskon
+        print(f"Halo {nama_pelanggan}, Anda adalah jenis pelanggan {jenis_pelanggan}, Total belanja awal Rp{total_belanja:.2f}, Anda mendapatkan diskon 5%, Total yang harus dibayar Rp{total_bayar:.2f}")
+    elif total_belanja >= 500000:
+        diskon = total_belanja * 0.1
+        total_bayar = total_belanja - diskon
+        print(f"Halo {nama_pelanggan}, Anda adalah jenis pelanggan {jenis_pelanggan}, Total belanja awal Rp{total_belanja:.2f}, Anda mendapatkan diskon 10%, Total yang harus dibayar Rp{total_bayar:.2f}")
+
+elif jenis_pelanggan.lower() == "gold":
+    if total_belanja < 500000:
+        diskon = total_belanja * 0.1
+        total_bayar = total_belanja - diskon
+        print(f"Halo {nama_pelanggan}, Anda adalah jenis pelanggan {jenis_pelanggan}, Total belanja awal Rp{total_belanja:.2f}, Anda mendapatkan diskon 10%, Total yang harus dibayar Rp{total_bayar:.2f}")
+    elif total_belanja >= 500000:
+        diskon = total_belanja * 0.15
+        total_bayar = total_belanja - diskon
+        print(f"Halo {nama_pelanggan}, Anda adalah jenis pelanggan {jenis_pelanggan}, Total belanja awal Rp{total_belanja:.2f}, Anda mendapatkan diskon 15%, Total yang harus dibayar Rp{total_bayar:.2f}")
+
+else:
+    print("Jenis pelanggan tidak valid.")
+
+# .2f berfungsi untuk membatasi angka dibelakang koma menjadi 2 angka saja
