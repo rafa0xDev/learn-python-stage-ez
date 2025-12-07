@@ -109,3 +109,16 @@ else:
     print("Jenis pelanggan tidak valid.")
 
 # .2f berfungsi untuk membatasi angka dibelakang koma menjadi 2 angka saja
+
+
+#warahi juned yang penilaian
+nilai = int(input("masukkan nilai anda: "))
+
+if nilai >= 90 :
+    print("A")
+elif nilai >= 80 :
+    print("B")
+elif nilai >= 70 :
+    print("C")
+else: 
+    print("D")
