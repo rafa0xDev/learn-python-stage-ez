@@ -142,3 +142,120 @@ def filter_penonton(umur, ktp):
         return "Tidak boleh nonton"
     
 print(filter_penonton(18, True))
+
+'''Aktivitas 1: Kuis Kilat & Code Tracing (Individu)
+
+Perintah:
+Kerjakan soal-soal penelusuran logika berikut secara mandiri.
+
+Soal 1 (Tracing Output)
+Amatilah potongan kode berikut, lalu tentukan output yang dicetak jika nilai a = 15 dan b = 20!
+'''
+a = 15
+b = 20
+
+if a > 10:
+    if b < 15:
+        print("Kondisi A")
+    else:
+        print("Kondisi B")
+else:
+    print("Kondisi C")
+
+#jawaban = Kondisi B, karena pada if statement pertama variabel a (15 > 10 = true) memenuhi syarat, lanjut ke if statement kedua, b (20 < 15 = false) tidak memebuhi syarat if statment, langsung dialihkan ke else statement.
+
+'''Soal 2 (Tracing Output SIM)
+Seseorang berusia 17 tahun tetapi belum memiliki SIM (punya_sim = False). Apa output dari kode di bawah?
+'''
+umur = 17
+punya_sim = False
+
+if umur >= 17:
+    if punya_sim:
+        print("Boleh Mengemudi")
+    else:
+        print("Harus Buat SIM Terlebih Dahulu")
+else:
+    print("Belum Cukup Umur")
+
+#jawaban = Harus Buat SIM Terlebih Dahulu, karena umur memenuhi syarat (17 >= 17 = true), lanjut ke if kedua, punya_sim tidak memenuhi syarat (false), langsung lanjut ke else statement
+
+'''Proyek Kelompok (Pair Programming)
+Judul Proyek:
+Build-a-Bot Eligibility System (Validator Diskon Kantin CLI)
+'''
+
+input_total_belanja = int(input("Total belanja anda: "))
+
+def buat_nota(besaran_diskon, total_awal, total_akhir):
+    print("\n===== NOTA =====")
+    print(f"Total Awal      : Rp{total_awal}")
+    print(f"Besaran Diskon  : Rp{besaran_diskon}")
+    print(f"Total Akhir     : Rp{total_akhir}")
+
+def validator_diskon(total_belanja):
+    persen_diskon = 0
+    besaran_diskon = 0
+    harga_akhir = total_belanja
+
+    if total_belanja >= 50000:
+        member = input("Apakah anda mempunyai kartu member? (y/n): ").lower()
+
+        if member == "y":
+            persen_diskon = 0.2
+            besaran_diskon = total_belanja * persen_diskon
+            harga_akhir = total_belanja - besaran_diskon
+
+            print("Kami memberi anda diskon 20%.")
+
+        else:
+            punya_kupon = input("Apakah anda membawa kupon? (y/n): ").lower()
+
+            if punya_kupon == "y":
+                persen_diskon = 0.1
+                besaran_diskon = total_belanja * persen_diskon
+                harga_akhir = total_belanja - besaran_diskon
+
+                print("Kami memberi anda diskon 10%.")
+            else:
+                print("Maaf, tidak ada diskon untuk anda.")
+
+    else:
+        print("Maaf, tidak ada diskon untuk anda.")
+
+    buat_nota(besaran_diskon, total_belanja, harga_akhir)
+
+validator_diskon(input_total_belanja)
+
+
+'''Aktivitas 3: Tes Praktik Mandiri (Unjuk Kerja)
+Judul Kasus:
+Validator Kelayakan Pinjaman Modal Usaha Kecil
+'''
+
+usia_pemohon = int(input("umur pemohon? : "))
+penghasilan_perbulan = int(input("penghasilan per bulan?(Rp) : Rp"))
+skor_kredit = int(input("skor kredit? : "))
+
+def validator_kelayakan_pinjaman(usia, penghasilan, skor) :
+    if usia >= 21 :
+        if penghasilan >= 5000000 :
+            if skor >= 75 :
+                return "pinjaman disetujui, bunga 5%"
+            else :
+                return "Pinjaman Disetujui dengan Syarat Penjamin, Bunga 7%"
+        else :
+            return "pinjaman ditolak, penghasilan kurang"
+       
+    else :
+        return "Usia Belum Memenuhi Syarat"
+
+cek = validator_kelayakan_pinjaman(usia_pemohon, penghasilan_perbulan, skor_kredit)
+print(cek)
+
+'''
+1. Mengapa indentation penting? Apa bedanya IndentationError dan Logical Error?
+Indentation menentukan blok eksekusi pada Python. Tanpa indentation yang benar, program bisa gagal dijalankan (IndentationError) atau berjalan tetapi menghasilkan logika yang salah (Logical Error).
+
+2. Kapan menggunakan Nested If dan kapan Single If dengan AND/OR?
+Gunakan Nested If jika setiap kondisi memiliki proses atau hasil yang berbeda. Gunakan AND/OR jika hanya ingin mengecek beberapa syarat sekaligus untuk satu hasil. Nested If lebih cocok untuk logika bertingkat, sedangkan AND/OR lebih ringkas untuk kondisi sederhana.'''
